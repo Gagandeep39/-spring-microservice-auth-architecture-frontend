@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   protocol: 'http://',
-  applicationUrl: 'localhost:41043',
+  applicationUrl: 'localhost:9100',
   authService: 'auth-service',
 };
 
