@@ -1,0 +1,32 @@
+.app {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  /* Evenly distibute space between rows */
+  justify-content: space-between;
+  /* Vertically align */
+  align-items: center;
+  background: yellow;
+  color: #fff;
+  /* ALways over menu */
+  z-index: 2;
+  transition: 0.5s;
+  // right: 300px;
+}
+
+// .menu {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: 300px;
+//   height: 100%;
+//   /* Helps in alighing content vertically */
+//   display: flex;
+//   /* Vertical align */
+//   align-items: center;
+//   /* Horizontal align */
+//   justify-content: center;
+// }
