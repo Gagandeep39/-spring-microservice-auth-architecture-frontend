@@ -1,11 +1,11 @@
-<div class="container">
+<div class="login">
     <div class="text-center">
       <h1>Welcome Back!</h1>
     </div>
     <form class="user" [formGroup]="loginForm" (ngSubmit)="login()">
       <div class="form-group">
         <input
-          class="form-control form-control-user"
+          class="form-control"
           type="username"
           formControlName="username"
           placeholder="Username"
@@ -30,7 +30,7 @@
       </div>
       <div class="form-group">
         <input
-          class="form-control form-control-user"
+          class="form-control"
           type="password"
           formControlName="password"
           type="password"
@@ -56,11 +56,10 @@
         </div>
       </div>
       <button
-        class="btn btn-primary btn-block text-white btn-user"
+        class="btn btn-primary btn-block"
         type="submit"
       >
         Login
       </button>
-      <hr />
     </form>
 </div>
