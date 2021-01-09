@@ -4,7 +4,6 @@ import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/operators';
 import { User } from '../models/user.model';
 import { EventService } from './event.service';
-import { JwtHelperService } from './jwt-helper.service';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -15,7 +14,6 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private jwtHelper: JwtHelperService,
     private eventServie: EventService,
     private router: Router
   ) {}
