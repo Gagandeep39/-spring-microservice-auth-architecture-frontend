@@ -5,6 +5,7 @@ import { tap } from 'rxjs/operators';
 import { User } from '../models/user.model';
 import { EventService } from './event.service';
 import { JwtHelperService } from './jwt-helper.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,8 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private jwtHelper: JwtHelperService,
-    private eventServie: EventService
+    private eventServie: EventService,
+    private router: Router
   ) {}
 
   login(formData) {
@@ -29,5 +31,25 @@ export class AuthService {
 
   saveToSessionStorage(user: User) {
     sessionStorage.setItem('user', JSON.stringify(user));
+  }
+
+  fetchFromSessionStorage(): User {
+    return JSON.parse(sessionStorage.getItem('user'));
+  }
+
+  logout(): void {
+    sessionStorage.clear();
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
+
+  isAuthenticated(): boolean {
+    const token = this.fetchFromSessionStorage()?.token;
+    // return !this.jwtHelper.isTokenExpired(token);
+    return null;
+  }
+
+  getRole() {
+    return this.fetchFromSessionStorage()?.role;
   }
 }
