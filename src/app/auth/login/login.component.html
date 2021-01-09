@@ -51,7 +51,7 @@
           <div
             *ngIf="loginForm.get('password').errors['serverValidationError']"
           >
-            {{ loginForm.controls["password"].errors.serverValidationError }}
+            {{ loginForm.controls["password"].errors?.serverValidationError }}
           </div>
         </div>
       </div>
