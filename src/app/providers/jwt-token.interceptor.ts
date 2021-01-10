@@ -23,6 +23,6 @@ export class JwtTokenInterceptor implements HttpInterceptor {
       authReq = request.clone({
         headers: request.headers.append('Authorization', `Bearer ${token}`),
       });
-    return next.handle(request);
+    return next.handle(authReq);
   }
 }
