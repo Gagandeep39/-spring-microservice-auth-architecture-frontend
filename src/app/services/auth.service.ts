@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  authServiceUrl = `${environment.protocol}${environment.applicationUrl}`;
+  authServiceUrl = `${environment.protocol}${environment.applicationUrl}/${environment.authService}`;
 
   constructor(
     private http: HttpClient,

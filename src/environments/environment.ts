@@ -5,8 +5,9 @@
 export const environment = {
   production: false,
   protocol: 'http://',
-  applicationUrl: 'localhost:9100',
+  applicationUrl: 'localhost:9000',
   authService: 'auth-service',
+  userService: 'user-service',
 };
 
 /*
