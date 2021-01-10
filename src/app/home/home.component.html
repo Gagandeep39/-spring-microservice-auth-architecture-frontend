@@ -1,7 +1,22 @@
-<div class="container">
-    <button (click)="helloWorld()" class="btn btn-primary">Make a dummy request</button>
-    <button (click)="helloUser()" class="btn btn-primary">Make a Userservice request</button>
+
+<div id="mySidebar" class="sidebar" (mouseleave)="toggleSidebar()">
+  <a (click)="toggleSidebar()" ><i class="material-icons">menu</i><span class="icon-text"></span></a><br>
+  <a ><i class="material-icons">info</i><span class="icon-text">about</span></a><br>
+  <a ><i class="material-icons">spa</i><span class="icon-text">services</span></a><br>
+  <a ><i class="material-icons">monetization_on</i><span class="icon-text"></span>clients</a><br>
+  <a ><i class="material-icons">email</i><span class="icon-text"></span>contact</a>
+</div>
+
+<div id="main">
+   <div class="container">
+    <button (click)="helloWorld()" class="btn btn-primary">
+      Make a dummy request
+    </button>
+    <button (click)="helloUser()" class="btn btn-primary">
+      Make a Userservice request
+    </button>
     <pre>
-        {{response | json}}
+        {{ response | json }}
     </pre>
+  </div>
 </div>
