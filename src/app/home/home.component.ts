@@ -26,6 +26,17 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  helloUser() {
+    console.log('Clicked');
+    
+    this.dummyService.userService().subscribe(res => {
+      this.response = res;
+      console.log(this.response);
+    }, error => {
+      this.response = error;
+    })
+  }
+
   
 
 }
